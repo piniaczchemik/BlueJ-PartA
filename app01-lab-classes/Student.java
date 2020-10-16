@@ -1,24 +1,20 @@
+import lang.stride.*;
+
 /**
- * The Student class represents a student in a student administration system.
- * It holds the student details relevant in our context.
- * 
- * @author Michael Kölling and David Barnes
- * @version 2016.02.29
- *  modified by Kamil Lesniewski 21906354
- * updated @version 15/10/20
- *
+ * The Student class represents a student in a student administration system. It holds the student details relevant in our context.
+ * @author Michael Kölling and David Barnes @version 2016.02.29 modified by Kamil Lesniewski 21906354 updated @version 15/10/20
  */
 public class Student
 {
-    // the student's full name
+    /* the student's full name*/
     private String name;
-    // the student ID
+    /* the student ID*/
     private String id;
-    // the amount of credits for study taken so far
+    /* the amount of credits for study taken so far*/
     private int credits;
-    // object of course class
-    private Course course;
-    
+    /* object of course class*/
+    private course course;
+
     /**
      * Create a new student with a given name and ID number.
      */
@@ -58,10 +54,9 @@ public class Student
      */
     public void addCredits(int additionalPoints)
     {
-        credits += additionalPoints;
+        credits = credits + additionalPoints;
     }
 
-    
     /**
      * Return the number of credit points this student has accumulated.
      */
@@ -69,32 +64,30 @@ public class Student
     {
         return credits;
     }
-    
+
     /**
-     *  Assign parameter course to field course
+     * Assign parameter course to field course
      */
-    public void addCourse(Course course)
+    public void addCourse(course course)
     {
         this.course = course;
     }
 
     /**
-     * Return the login name of this student. The login name is a combination
-     * of the first four characters of the student's name and the first three
-     * characters of the student's ID number.
+     * Return the login name of this student. The login name is a combination of the first four characters of the student's name and the first three characters of the student's ID number.
      */
     public String getLoginName()
     {
-        return name.substring(0,4) + id.substring(0,3);
+        return name.substring(0, 4) + id.substring(0, 3);
     }
-    
+
     /**
      * Print the student's name and ID number to the output terminal.
      */
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
-        //System.out.println("course number: " + course.getCodeNumber() + " course title: " + course.getTitle());
-        course.print();
+        /* System.out.println("course number: " + course.getCodeNumber() + " course title: " + course.getTitle());*/
+        
     }
 }
