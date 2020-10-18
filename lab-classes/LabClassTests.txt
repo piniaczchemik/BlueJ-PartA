@@ -1,0 +1,24 @@
+Student student1 = new Student("Mike", "1");
+student1.getName()
+    returned String "Mike"
+Student Mike = new Student("Mike John", "1");
+Student Kate = new Student("Kate Many", "2");
+Student Daniel = new Student("Daniel Monk", "3");
+LabClass labClass1 = new LabClass(3);
+labClass1.setInstructor("Nicholas Day");
+labClass1.setTime("29/09/2020");
+labClass1.setRoom("G100");
+Daniel.getCredits()
+    returned int 0
+labClass1.enrollStudent(Mike);
+labClass1.enrollStudent(Kate);
+labClass1.enrollStudent(Daniel);
+Mike.getCredits()
+    returned int 0
+Daniel.getCredits()
+    returned int 0
+Daniel.getCredits()
+    returned int 0
+Mike.addCredits(20);
+Kate.addCredits(20);
+Daniel.addCredits(20);
