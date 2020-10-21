@@ -1,3 +1,9 @@
+
+
+
+
+
+import java.util.ArrayList;
 /**
  * TicketMachine models a ticket machine that issues
  * flat-fare tickets.
@@ -19,7 +25,18 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-
+    
+    private static final Ticket aylesburyTicket = new Ticket("Aylesbury", 220, "21st October");
+    
+    private static final Ticket amershamTicket = new Ticket("Amersham", 300, "12th October");
+    
+    private static final Ticket highWycombeTicket = new Ticket("High Wycombe", 330, "10th October");
+    
+    // An ArrayList of all the available tickets
+    private ArrayList<Ticket> availableTickets;
+    // The ticket that is currently selected
+    private Ticket selectedTicket;
+    
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -28,6 +45,12 @@ public class TicketMachine
         price = cost;
         balance = 0;
         total = 0;
+        selectedTicket = null;
+        availableTickets = new ArrayList<Ticket>();
+        this.availableTickets.add(aylesburyTicket);
+        this.availableTickets.add(amershamTicket);
+        this.availableTickets.add(highWycombeTicket);
+        printAvailableTickets();
     }
 
     /**
@@ -46,21 +69,52 @@ public class TicketMachine
     {
         return balance;
     }
+    
+    /**
+     * The method for selcting what ticket the user wants
+     * updates the price accordingly and prints the selected ticket
+     */
+    public void selectTicket(String destination)
+    {
+        if (destination == "aylesbury")
+        {
+            this.selectedTicket = this.aylesburyTicket;
+            setPrice();
+            printSelectedTicket();
+        }
+        else if (destination == "amersham")
+        {
+            this.selectedTicket = this.amershamTicket;
+            setPrice();
+            printSelectedTicket();
+        }  
+        else if (destination == "high Wycombe")
+        {
+        this.selectedTicket = this.highWycombeTicket;
+        setPrice();
+        printSelectedTicket();
+        }
+        else
+        {
+            System.out.println("Please type your destination again");
+        }
+    }
 
     /**
      * Receive an amount of money from a customer.
-     * Check that the amount is sensible.
+     * Check that the amount is one of the only coins
      */
     public void insertMoney(int amount)
     {
-        if(amount > 0) 
+        if(amount == 10 || amount == 20 ||
+            amount == 100 || amount == 200)
         {
             balance = balance + amount;
+            System.out.println(amount + "inserted");
         }
         else 
         {
-            System.out.println("Use a positive amount rather than: " +
-                               amount);
+            System.out.println("This machine only accepts 10p, 20p, £1, £2 coins");
         }
     }
 
@@ -71,7 +125,7 @@ public class TicketMachine
      */
     public void printTicket()
     {
-        if(balance >= price) 
+        if(this.balance >= this.price && selectedTicket.getDestination() != "") 
         {
             // Simulate the printing of a ticket.
             System.out.println("##################");
@@ -85,15 +139,33 @@ public class TicketMachine
             total = total + price;
             // Reduce the balance by the price.
             balance = balance - price;
+            
+            refundBalance();
+        }
+        else if(selectedTicket.getDestination() == null)
+        {
+               System.out.println("Please select a ticket to purchase");
+                    
         }
         else 
-        {
-            System.out.println("You must insert at least: " +
+        {    
+        System.out.println("You must insert at least: " +
                                (price - balance) + " more cents.");
                     
         }
     }
-
+    
+     /**
+     * Prints all the available tickets
+     */
+    public void printAvailableTickets()
+    {
+        for(Ticket ticket : availableTickets)
+        {
+            System.out.println(ticket.printTicket());    
+        }
+    }
+    
     /**
      * Return the money in the balance.
      * The balance is cleared.
@@ -104,5 +176,25 @@ public class TicketMachine
         amountToRefund = balance;
         balance = 0;
         return amountToRefund;
+    }
+    
+     /**
+     * Displays the current ticket selected
+     */
+    private void printSelectedTicket()
+    {
+        System.out.println("Selected Ticket: " + this.selectedTicket.printTicket());
+        System.out.println("Please insert coins to purchase this ticket!");
+    }
+    
+    /**
+     * Sets the price
+     */
+    private void setPrice()
+    {
+        if(this.selectedTicket != null)
+        {
+            this.price = this.selectedTicket.getPrice();
+        }
     }
 }
