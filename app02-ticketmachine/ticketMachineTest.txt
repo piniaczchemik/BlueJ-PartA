@@ -1,35 +1,25 @@
-TicketMachine ticketMa1 = new TicketMachine(10);
-Aylesbury, Price: £220
-Amersham, Price: £300
-High Wycombe, Price: £330
+TicketMachine ticketMa1 = new TicketMachine(500);
 ticketMa1.getBalance()
     returned int 0
 ticketMa1.getBalance()
     returned int 0
 ticketMa1.getPrice()
-    returned int 10
-ticketMa1.insertMoney(20);
-20inserted
-ticketMa1.refundBalance()
-    returned int 20
-ticketMa1.printTicket();
-    Exception occurred.
-ticketMa1.selectTicket("aylesbury");
-Selected Ticket: Aylesbury, Price: £220
-Please insert coins to purchase this ticket!
-ticketMa1.getBalance()
-    returned int 0
-ticketMa1.getBalance()
-    returned int 0
-ticketMa1.getPrice()
-    returned int 220
-ticketMa1.insertMoney(300);
-This machine only accepts 10p, 20p, £1, £2 coins
-ticketMa1.printAvailableTickets();
-Aylesbury, Price: £220
-Amersham, Price: £300
-High Wycombe, Price: £330
-ticketMa1.printTicket();
-You must insert at least: 220 more cents.
-Coin.values()
-    returned Object <object reference>
+    returned int 500
+Coin Twenty = new Coin(20);
+TicketMachine ticketMa1 = new TicketMachine(500);
+Coin twenty = new Coin(20);
+Coin ten = new Coin(10);
+Coin onepund = new Coin(100);
+Coin twoPunds = new Coin(200);
+Ticket Aylesbury = new Ticket("aylesbury", 220, "21/10/20");
+Ticket Amersham = new Ticket("amersham", 300, "21/10/20");
+Ticket wycombe = new Ticket("highWycombe", 330, "21/10/20");
+ticketMa1.insertMoney(500);
+Ticket aylesbury = new Ticket("Aylesbury", 220, "20/20/20");
+Ticket Amersham = new Ticket("amersham", 300, "20/20/20");
+Ticket Wycombe = new Ticket("highWycombe", 330, "20/20/20");
+Coin tenpence = new Coin(10);
+Coin twentyPence = new Coin(20);
+Coin pound = new Coin(100);
+Coin twoPunds = new Coin(200);
+TicketMachine TicketMachine = new TicketMachine(500);
