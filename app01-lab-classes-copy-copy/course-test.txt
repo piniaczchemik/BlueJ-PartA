@@ -1,0 +1,34 @@
+Student jake = new Student("jake gale", "123456");
+Student mike = new Student("mike gal" , "123457");
+Student john = new Student("john duran", "123458");
+jake.addCredits(20);
+mike.addCredits(20);
+john.addCredits(20);
+LabClass co452Lab = new LabClass(3);
+co452Lab.setInstructor("nicholas day");
+co452Lab.setRoom("G100");
+co452Lab.setTime("friday 2/10/2020");
+co452Lab.enrollStudent(john);
+co452Lab.enrollStudent(mike);
+co452Lab.enrollStudent(jake);
+co452Lab.printList();
+Lab class friday 2/10/2020
+Instructor: nicholas day   Room: G100
+Class list:
+john duran, student ID: 123458, credits: 20
+    Exception occurred.
+Course computing = new Course("G200", "g200 computing");
+john.addCourse(computing);
+mike.addCourse(computing);
+jake.addCourse(computing);
+co452Lab.printList();
+Lab class friday 2/10/2020
+Instructor: nicholas day   Room: G100
+Class list:
+john duran, student ID: 123458, credits: 20
+Course code: null, title: g200 computing
+mike gal, student ID: 123457, credits: 20
+Course code: null, title: g200 computing
+jake gale, student ID: 123456, credits: 20
+Course code: null, title: g200 computing
+Number of students: 3
