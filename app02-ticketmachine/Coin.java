@@ -17,7 +17,7 @@ public class Coin
       /**
        * sets the value for each coin
        */
-      private Coin(int value)
+      public Coin(int value)
       {
            this.value = value;  
       }
