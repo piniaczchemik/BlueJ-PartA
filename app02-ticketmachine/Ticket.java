@@ -3,7 +3,7 @@
  * Write a description of class Ticket here.
  *
  * @Kamil Lesniewski 21906354
- * @version (a version number or a date)
+ * @version 23/10/2020
  */
 public class Ticket
 {
@@ -14,22 +14,16 @@ public class Ticket
     //The date purchased of the ticket
     private String date;
     
+   
+    
     /**
-     * the constructor of the class 
+     * returns the destination of the ticket
      */
     public Ticket(String destination, int price, String date)
     {
         this.destination = destination;
         this.price = price;
-        this.date = date;
-    }
-    
-    /**
-     * returns the destination of the ticket
-     */
-    public String getDestination()
-    {
-        return this.destination;
+        this.date = date; 
     }
     
     /**
@@ -51,9 +45,9 @@ public class Ticket
     /**
      * return the price and destination in as s single string 
      */
-    public String printTicket()
+    public String getDestination()
     {
-        return (this.destination + ", Price: £" + this.price);
+        return this.destination;  
     }
 }
 
