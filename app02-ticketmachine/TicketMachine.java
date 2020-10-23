@@ -13,9 +13,9 @@ import java.util.ArrayList;
  * if enough money has been input.
  * 
  * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
+ * @version 2020.10.23
  * 
- * Modified by Student Name
+ * Modified Kamil Lesniewski
  */
 public class TicketMachine
 {

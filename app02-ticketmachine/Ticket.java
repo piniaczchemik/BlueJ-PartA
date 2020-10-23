@@ -48,8 +48,13 @@ public class Ticket
         return this.date;
     }
     
-
-
+    /**
+     * return the price and destination in as s single string 
+     */
+    public String printTicket()
+    {
+        return (this.destination + ", Price: £" + this.price);
+    }
 }
 
 
