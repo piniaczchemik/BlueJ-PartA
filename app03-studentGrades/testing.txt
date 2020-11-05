@@ -1,0 +1,101 @@
+Student student1 = new Student("Kamil", "1");
+Course course1 = new Course("Networking");
+Student Kamil = new Student("Kamil Lesniewski", "21906354");
+Course Course = new Course("Networking");
+Student Kamil = new Student("Kamil Lesniewski", "21906354");
+Course Course = new Course("AI");
+Kamil.getLoginName()
+    returned String "Kami219"
+Module Networking = new Module("networking", "co11");
+Module AI = new Module("AI", "co22");
+Module Cyber = new Module("CS", "co33");
+Module Web = new Module("Web development", "co44");
+Networking.addMarks(25);
+AI.addMarks(40);
+Cyber.addMarks(70);
+Web.addMarks(80);
+Kamil.print();
+Kamil Lesniewski, Student ID: 21906354, credits: 0
+Kamil.getLoginName()
+    returned String "Kami219"
+Kamil.getLoginName()
+    returned String "Kami219"
+Student Kamil = new Student("Kamil Lesniewski", "21906354");
+Course Course = new Course("Computing");
+Module Computing = new Module("cyber", "1");
+Module module1 = new Module("AI", "2");
+Module module2 = new Module("cyber", "3");
+Module module3 = new Module("networking", "4");
+Computing.getMark()
+    returned int 0
+Computing.getTitle()
+    returned String "cyber"
+Course.addModule(Computing);
+Course.addModule(module1);
+Course.addModule(module2);
+Course.addModule(module3);
+Kamil.enrollStudent(Course);
+Computing.getMark()
+    returned int 0
+Computing.addMarks(30);
+module1.addMarks(50);
+module2.addMarks(80);
+module3.addMarks(90);
+module1.getDetails()
+    returned String "2: AI 50/100"
+Course.printCourse();
+Computing
+1: cyber 30/100
+2: AI 50/100
+3: cyber 80/100
+4: networking 90/100
+Kamil.printFinalGrade();
+Kamil Lesniewski, Student ID: 21906354, credits: 0
+1: cyber 30/100
+2: AI 50/100
+3: cyber 80/100
+4: networking 90/100
+Unexpected error
+Final Grade: null
+Course.getFinalGrade();
+1: cyber 30/100
+2: AI 50/100
+3: cyber 80/100
+4: networking 90/100
+Unexpected error
+Final Grade: null
+Computing.getDetails()
+    returned String "1: cyber 30/100"
+module1.getDetails()
+    returned String "2: AI 50/100"
+module2.getDetails()
+    returned String "3: cyber 80/100"
+module3.getDetails()
+    returned String "4: networking 90/100"
+Kamil.printFinalGrade();
+Kamil Lesniewski, Student ID: 21906354, credits: 0
+1: cyber 30/100
+2: AI 50/100
+3: cyber 80/100
+4: networking 90/100
+Unexpected error
+Final Grade: null
+Kamil.print();
+Kamil Lesniewski, Student ID: 21906354, credits: 0
+Course.getFinalGrade();
+1: cyber 30/100
+2: AI 50/100
+3: cyber 80/100
+4: networking 90/100
+Unexpected error
+Final Grade: null
+Computing.getMark()
+    returned int 30
+Kamil.printFinalGrade();
+Kamil Lesniewski, Student ID: 21906354, credits: 0
+1: cyber 30/100
+2: AI 50/100
+3: cyber 80/100
+4: networking 90/100
+Unexpected error
+Final Grade: null
