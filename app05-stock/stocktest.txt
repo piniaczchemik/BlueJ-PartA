@@ -1,0 +1,151 @@
+StockManager Jake = new StockManager();
+StockDemo stockDem1 = new StockDemo(Jake);
+Product product1 = new Product(1, "Pen");
+product1.setName("car");
+stockDem1.demoDelivery();
+987: Laptop stock level: 0
+10
+986: Keybord stock level: 0
+10
+985: Glass stock level: 0
+10
+984: Bike stock level: 0
+10
+983: Fridge stock level: 0
+10
+982: Door stock level: 0
+10
+981: Pen stock level: 0
+10
+980: Board stock level: 0
+10
+989: Ketchup stock level: 0
+10
+988: Cards stock level: 0
+10
+Product Delivered : 987: Laptop stock level: 1
+Product Delivered : 986: Keybord stock level: 11
+Product Delivered : 985: Glass stock level: 111
+Product Delivered : 984: Bike stock level: 2
+Product Delivered : 983: Fridge stock level: 22
+Product Delivered : 982: Door stock level: 222
+Product Delivered : 981: Pen stock level: 3
+Product Delivered : 980: Board stock level: 33
+Product Delivered : 989: Ketchup stock level: 333
+Product Delivered : 988: Cards stock level: 4
+987: Laptop stock level: 1
+10
+986: Keybord stock level: 11
+10
+985: Glass stock level: 111
+10
+984: Bike stock level: 2
+10
+983: Fridge stock level: 22
+10
+982: Door stock level: 222
+10
+981: Pen stock level: 3
+10
+980: Board stock level: 33
+10
+989: Ketchup stock level: 333
+10
+988: Cards stock level: 4
+10
+stockDem1.demoSell();
+987: Laptop stock level: 1
+10
+986: Keybord stock level: 11
+10
+985: Glass stock level: 111
+10
+984: Bike stock level: 2
+10
+983: Fridge stock level: 22
+10
+982: Door stock level: 222
+10
+981: Pen stock level: 3
+10
+980: Board stock level: 33
+10
+989: Ketchup stock level: 333
+10
+988: Cards stock level: 4
+10
+stockDem1.getManager()
+    returned Object <object reference>
+stockDem1.getProduct(981)
+    returned Object <object reference>
+stockDem1.runDemo();
+987: Laptop stock level: 1
+10
+986: Keybord stock level: 11
+10
+985: Glass stock level: 111
+10
+984: Bike stock level: 2
+10
+983: Fridge stock level: 22
+10
+982: Door stock level: 222
+10
+981: Pen stock level: 3
+10
+980: Board stock level: 33
+10
+989: Ketchup stock level: 333
+10
+988: Cards stock level: 4
+10
+987: Laptop stock level: 1
+10
+986: Keybord stock level: 11
+10
+985: Glass stock level: 111
+10
+984: Bike stock level: 2
+10
+983: Fridge stock level: 22
+10
+982: Door stock level: 222
+10
+981: Pen stock level: 3
+10
+980: Board stock level: 33
+10
+989: Ketchup stock level: 333
+10
+988: Cards stock level: 4
+10
+Product Delivered : 987: Laptop stock level: 2
+Product Delivered : 986: Keybord stock level: 22
+Product Delivered : 985: Glass stock level: 222
+Product Delivered : 984: Bike stock level: 4
+Product Delivered : 983: Fridge stock level: 44
+Product Delivered : 982: Door stock level: 444
+Product Delivered : 981: Pen stock level: 6
+Product Delivered : 980: Board stock level: 66
+Product Delivered : 989: Ketchup stock level: 666
+Product Delivered : 988: Cards stock level: 8
+987: Laptop stock level: 2
+10
+986: Keybord stock level: 22
+10
+985: Glass stock level: 222
+10
+984: Bike stock level: 4
+10
+983: Fridge stock level: 44
+10
+982: Door stock level: 444
+10
+981: Pen stock level: 6
+10
+980: Board stock level: 66
+10
+989: Ketchup stock level: 666
+10
+988: Cards stock level: 8
+10
