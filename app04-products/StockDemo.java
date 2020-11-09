@@ -18,15 +18,16 @@ public class StockDemo
     public StockDemo()
     {
         manager = new StockManager();
-        manager.addProduct(new Product(132, "Clock Radio",0));
-        manager.addProduct(new Product(37,  "Mobile Phone",0));
-        manager.addProduct(new Product(23,  "Microwave Oven",0));
-        manager.addProduct(new Product(12,  "Personal Computer",0));
-        manager.addProduct(new Product(15,  "Boxing Gloves",0));
-        manager.addProduct(new Product(18,  "Pen",0));
-        manager.addProduct(new Product(19,  "Smartwatch",0));
-        manager.addProduct(new Product(99,  "Desk",0));
+        manager.addProduct(new Product(132, "Clock Radio,0"));
+        manager.addProduct(new Product(37,  "Mobile Phone,0"));
+        manager.addProduct(new Product(23,  "Microwave Oven,0"));
+        manager.addProduct(new Product(12,  "Personal Computer,0"));
+        manager.addProduct(new Product(15,  "Boxing Gloves,0"));
+        manager.addProduct(new Product(18,  "Pen,0"));
+        manager.addProduct(new Product(19,  "Smartwatch,0"));
+        manager.addProduct(new Product(99,  "Desk,0"));
         manager.addProduct(new Product(821, "Smart TV,0"));
+        manager.addProduct(new Product(999, "Mirror Glass,0"));
         
                 manager.printALLProductDetails();
      }

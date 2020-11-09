@@ -4,8 +4,8 @@ import java.util.ArrayList;
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Kamil Lesniewski) 
+ * @version (9/11/2020)
  */
 public class StockManager
 {
@@ -37,6 +37,12 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+         for (Product product : stock){
+      if (id == product.getID()){
+          product.increaseQuantity(amount);
+          System.out.println(product.acceptingDelivery());
+        }
+    } 
     }
     
     /**
@@ -46,7 +52,28 @@ public class StockManager
      */
     public Product findProduct(int id)
     {
-        return null;
+          for (Product product : stock) {
+           if (product.getID() == id)
+           {
+            return product;
+           }
+       }   
+       System.out.println("Product with id: " + id + " cannot be found");
+       return null;
+    }
+    
+     /**
+     * Sell one of the given item.
+     * Show the before and after status of the product.
+     * @param id The ID of the product being sold.
+     */
+    public void sellProduct(int id,int amount)
+    {
+        Product product = findProduct(id);
+        if(product != null) 
+        {
+            product.sell(amount);
+        }
     }
     
     /**
@@ -58,7 +85,15 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
-        return 0;
+         for (Product product : stock){
+            int pID = product.getID();
+            if (pID == id){
+                System.out.println(product.toString());
+            }
+            else {
+                System.out.println("ID not found");
+           }  
+        }
     }
 
     /**
@@ -66,5 +101,11 @@ public class StockManager
      */
     public void printProductDetails()
     {
+        System.out.println("Piniaczchemik Stock List");
+        System.out.println("=================");
+        for (Product product : stock){
+        System.out.println(product.toString());
+        }
+        System.out.println("=================");
     }
 }

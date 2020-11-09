@@ -1,8 +1,8 @@
 /**
  * Model some details of a product sold by a company.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Kamil Lesniewski
+ * @version 09/11/2020
  */
 public class Product
 {
@@ -58,6 +58,14 @@ public class Product
         return id + ": " +  name + " stock level: " + quantity;
     }
 
+      /**
+     * adds a * next to products that have recently excepted a delivery
+     */
+     public String acceptingDelivery()
+    {
+        return id + ": " +  name + " (stock level: " + quantity + "*)";
+    }
+    
     /**
      * Restock with the given amount of this product.
      * The current quantity is incremented by the given amount.
@@ -77,19 +85,33 @@ public class Product
         }
     }
 
-    /**
+       /**
      * Sell one of these products.
      * An error is reported if there appears to be no stock.
      */
-    public void sellOne()
+    public void sell(int amount)
     {
+        System.out.println(toString());
         if(quantity > 0) 
         {
-            quantity--;
+            if (amount < 0)
+            {
+               System.out.println("Amount can not be less than 0");
+            }
+            else if(amount <= quantity)
+            {
+                this.quantity = this.quantity - amount;
+                System.out.println("Sold: " + amount + " " + name + "s");
+                toString();
+            }
+            else 
+            {
+                System.out.println("Amount to sell is greater than current stock level");
+            }
         }
         else 
         {
-            System.out.println(
+           System.out.println(
                 "Attempt to sell an out of stock item: " + name);
         }
     }
